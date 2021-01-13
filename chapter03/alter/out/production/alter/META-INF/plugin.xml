@@ -1,0 +1,29 @@
+<idea-plugin>
+  <id>org.javaboy.plugin.alter</id>
+  <name>alter</name>
+  <version>1.0</version>
+  <vendor email="wangsong0210@gmail.com" url="http://www.javaboy.org">江南一点雨</vendor>
+
+  <description>天天坐着写代码，是否时常感觉 pp 不爽？试试松哥这款插件，久坐提醒，抽支烟，笑一笑。</description>
+
+  <change-notes>天天坐着写代码，是否时常感觉 pp 不爽？试试松哥这款插件，久坐提醒，抽支烟，笑一笑。</change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="alter_id" class="org.javaboy.plugin.action.AlterAction" text="滴滴滴" description="通知">
+      <add-to-group group-id="ToolsMenu" anchor="first"/>
+    </action>
+  </actions>
+
+</idea-plugin>

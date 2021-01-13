@@ -1,0 +1,16 @@
+server:
+  port: 8080
+  tomcat:
+    accesslog:
+      enabled: true
+book:
+  namea: 水浒传
+  tags:
+    - 历史
+    - 小说
+    - 明代
+  authors:
+    - name: 罗贯中
+      age: 88
+    - name: 施耐庵
+      age: 99

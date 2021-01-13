@@ -1,0 +1,23 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.javaboy.test.mapper.OauthClientDetailsMapper">
+
+    <resultMap id="BaseResultMap" type="org.javaboy.test.model.OauthClientDetails">
+            <result column="client_id" property="clientId" jdbcType="VARCHAR" />
+            <result column="resource_ids" property="resourceIds" jdbcType="VARCHAR" />
+            <result column="client_secret" property="clientSecret" jdbcType="VARCHAR" />
+            <result column="scope" property="scope" jdbcType="VARCHAR" />
+            <result column="authorized_grant_types" property="authorizedGrantTypes" jdbcType="VARCHAR" />
+            <result column="web_server_redirect_uri" property="webServerRedirectUri" jdbcType="VARCHAR" />
+            <result column="authorities" property="authorities" jdbcType="VARCHAR" />
+            <result column="access_token_validity" property="accessTokenValidity" jdbcType="INTEGER" />
+            <result column="refresh_token_validity" property="refreshTokenValidity" jdbcType="INTEGER" />
+            <result column="additional_information" property="additionalInformation" jdbcType="VARCHAR" />
+            <result column="autoapprove" property="autoapprove" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <select id="getAllOauthClientDetailss" resultMap="BaseResultMap">
+        select * from oauth_client_details;
+    </select>
+</mapper>

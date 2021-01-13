@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--    <script th:src="@{http://localhost:8080/hello.js}"></script>
+        <script th:src="@{~/hello.js}"></script>
+        <script th:src="@{//localhost:8080/hello.js}"></script>
+        <script th:src="@{//localhost:8080/hello.js(name='javaboy',age=99)}"></script>-->
+    <script th:src="@{/hello.js}"></script>
+</head>
+<body>
+
+<script th:inline="javascript">
+    var name = [[${user.username}]];
+    console.log(name);
+</script>
+
+<div th:with="str='hello <strong>javaboy</strong>'">
+    <div>hello [[${str}]]</div>
+    <div>hello [(${str})]</div>
+</div>
+<hr>
+
+<div>hello [[${user.username}]]</div>
+<div>hello [(${user.username})]</div>
+
+<img th:attr="src=@{/1.png},title=${user.username},alt=${user.username}">
+<img th:src="@{/1.png}" th:alt="${user.username}" th:title="${user.username}">
+<img th:src="@{/1.png}" th:alt-title="${user.username}">
+
+<div th:text="${#execInfo.getProcessedTemplateName()}"></div>
+<div th:text="${#arrays.length(users)}"></div>
+<div th:text="${#lists.size(users)}"></div>
+
+<div th:text="${#session.getAttribute('name')}"></div>
+
+<hr>
+
+<div th:with="age=99">
+    <div th:text="(${age} ne 99)?'yes'"></div>
+</div>
+
+<hr>
+
+<div th:with="age=(99*99/99+99-1)">
+    <div th:text="9 eq 9 and 8 ne 8"></div>
+    <div th:text="9 eq 9 or 8 ne 8"></div>
+    <div th:text="not(9 eq 9 or 8 ne 8)"></div>
+    <div th:text="!(9 eq 9 or 8 ne 8)"></div>
+</div>
+
+<div th:with="age=(99*99/99+99-1)">
+    <div th:text="${age} eq 197"></div>
+    <div th:text="${age} gt 197"></div>
+    <div th:text="${age} ge 197"></div>
+    <div th:text="${age} lt 197"></div>
+    <div th:text="${age} le 197"></div>
+    <div th:text="${age} ne 197"></div>
+</div>
+
+<div th:with="age=(99*99/99+99-1)">
+    <div th:text="${age}"></div>
+</div>
+
+<div th:text="'hello '+'javaboy'"></div>
+<div th:text="'hello '+${user.username}"></div>
+<div th:text="|hello ${user.username}|"></div>
+<div th:text="'hello'+' '+'javaboy and '+|hello ${user.username}|"></div>
+
+<div th:text="'你好 江南一点雨'"></div>
+<div th:text="99"></div>
+<div th:text="true"></div>
+<div th:text="javaboy"></div>
+
+<div th:text="#{hello}"></div>
+
+<div th:object="${user}">
+    <div th:text="*{username}"></div>
+    <div th:text="*{address}"></div>
+    <div th:text="*{id}"></div>
+</div>
+
+<hr>
+
+<div th:text="${user.username}"></div>
+<div th:text="${user.address}"></div>
+<div th:text="${user.id}"></div>
+
+<hr>
+
+<div th:text="*{user.username}"></div>
+<div th:text="*{user.address}"></div>
+<div th:text="*{user.id}"></div>
+
+<table border="1">
+    <tr th:each="u,state : ${users}">
+        <td th:text="${u.id}"></td>
+        <td th:text="${u.username}"></td>
+        <td th:text="${u.address}"></td>
+        <td th:text="${state.index}"></td>
+        <td th:text="${state.count}"></td>
+        <td th:text="${state.size}"></td>
+        <td th:text="${state.current}"></td>
+        <td th:text="${state.odd}"></td>
+        <td th:text="${state.even}"></td>
+        <td th:text="${state.first}"></td>
+        <td th:text="${state.last}"></td>
+        <td th:switch="${state.odd}">
+            <span th:case="true">odd</span>
+            <span th:case="*">even</span>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

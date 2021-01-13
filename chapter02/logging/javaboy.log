@@ -1,0 +1,15 @@
+2020-12-14 21:01:50.549  INFO 3930 --- [main] org.javaboy.logging.LoggingApplication   : Starting LoggingApplication using Java 10.0.2 on sang-3.local with PID 3930 (/Users/sang/workspace/springboot/code/chapter02/logging/target/classes started by sang in /Users/sang/workspace/springboot/code/chapter02/logging)
+2020-12-14 21:01:50.551  INFO 3930 --- [main] org.javaboy.logging.LoggingApplication   : No active profile set, falling back to default profiles: default
+2020-12-14 21:01:51.111  INFO 3930 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-14 21:01:51.117  INFO 3930 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-14 21:01:51.117  INFO 3930 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2020-12-14 21:01:51.153  INFO 3930 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-14 21:01:51.153  INFO 3930 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 557 ms
+2020-12-14 21:01:51.248  INFO 3930 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-14 21:01:51.254 DEBUG 3930 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-14 21:01:51.289 DEBUG 3930 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2020-12-14 21:01:51.302 DEBUG 3930 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-12-14 21:01:51.309 DEBUG 3930 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-14 21:01:51.381  INFO 3930 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-14 21:01:51.395  INFO 3930 --- [main] org.javaboy.logging.LoggingApplication   : Started LoggingApplication in 1.1 seconds (JVM running for 1.632)
+2020-12-14 21:07:45.203  INFO 3930 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

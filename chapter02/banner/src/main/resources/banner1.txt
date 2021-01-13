@@ -1,0 +1,17 @@
+${AnsiColor.BRIGHT_RED}
+     __                        ________ ________ ________
+    |__|____ ___  _______     /  _____//  _____//  _____/
+    |  \__  \\  \/ /\__  \   /   __  \/   __  \/   __  \ 
+    |  |/ __ \\   /  / __ \_ \  |__\  \  |__\  \  |__\  \
+/\__|  (____  /\_/  (____  /  \_____  /\_____  /\_____  /
+\______|    \/           \/         \/       \/       \/ 
+
+MANIFEST.MF 中的版本号：
+
+${application.version}
+${application.formatted-version}
+
+Spring Boot 的版本号：
+
+${spring-boot.version}
+${spring-boot.formatted-version}

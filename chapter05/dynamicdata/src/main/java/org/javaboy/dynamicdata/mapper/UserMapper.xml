@@ -1,0 +1,13 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.javaboy.dynamicdata.mapper.UserMapper">
+
+    <insert id="addUser">
+        insert into user (username) values (#{username});
+    </insert>
+
+    <select id="getAllUsers" resultType="org.javaboy.dynamicdata.model.User">
+        select * from user;
+    </select>
+</mapper>

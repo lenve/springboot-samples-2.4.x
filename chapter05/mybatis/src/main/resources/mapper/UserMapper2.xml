@@ -1,0 +1,30 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.javaboy.mybatis.mapper.UserMapper2">
+
+    <resultMap id="UserMap" type="org.javaboy.mybatis.model.User">
+        <id property="id" column="id"/>
+        <result property="username" column="username"/>
+        <result property="address" column="address1"/>
+    </resultMap>
+
+    <select id="getUserById" resultMap="UserMap">
+        select * from user where id=#{id};
+    </select>
+
+    <select id="getAllUsers" resultMap="UserMap">
+        select * from user ;
+    </select>
+
+    <insert id="addUser" parameterType="org.javaboy.mybatis.model.User" useGeneratedKeys="true" keyProperty="id">
+        insert into user (username,address1) values (#{username},#{address});
+    </insert>
+
+    <delete id="deleteById">
+        delete from user where id=#{id}
+    </delete>
+    <update id="updateById">
+        update user set username = #{username} where id=#{id};
+    </update>
+</mapper>

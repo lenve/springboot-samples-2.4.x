@@ -1,0 +1,40 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.javaboy.test.mapper.VmallSellerMapper">
+
+    <resultMap id="BaseResultMap" type="org.javaboy.test.model.VmallSeller">
+            <result column="id" property="id" jdbcType="BIGINT" />
+            <result column="seller_nick" property="sellerNick" jdbcType="VARCHAR" />
+            <result column="customer_remark" property="customerRemark" jdbcType="VARCHAR" />
+            <result column="password" property="password" jdbcType="VARCHAR" />
+            <result column="app_key" property="appKey" jdbcType="BIGINT" />
+            <result column="app_secret" property="appSecret" jdbcType="VARCHAR" />
+            <result column="callback_url" property="callbackUrl" jdbcType="VARCHAR" />
+            <result column="refresh_token" property="refreshToken" jdbcType="VARCHAR" />
+            <result column="w2_expires_in" property="w2ExpiresIn" jdbcType="BIGINT" />
+            <result column="avatar" property="avatar" jdbcType="VARCHAR" />
+            <result column="mobile" property="mobile" jdbcType="VARCHAR" />
+            <result column="email" property="email" jdbcType="VARCHAR" />
+            <result column="parent_nick" property="parentNick" jdbcType="VARCHAR" />
+            <result column="subscribe_version" property="subscribeVersion" jdbcType="INTEGER" />
+            <result column="dead_line" property="deadLine" jdbcType="TIMESTAMP" />
+            <result column="type" property="type" jdbcType="INTEGER" />
+            <result column="plus_time" property="plusTime" jdbcType="TIMESTAMP" />
+            <result column="gift_version" property="giftVersion" jdbcType="INTEGER" />
+            <result column="last_login_time" property="lastLoginTime" jdbcType="TIMESTAMP" />
+            <result column="last_login_ip" property="lastLoginIp" jdbcType="VARCHAR" />
+            <result column="settlement_type" property="settlementType" jdbcType="INTEGER" />
+            <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+            <result column="modify_time" property="modifyTime" jdbcType="TIMESTAMP" />
+            <result column="username" property="username" jdbcType="CHAR" />
+            <result column="account_non_expired" property="accountNonExpired" jdbcType="BIT" />
+            <result column="account_non_locked" property="accountNonLocked" jdbcType="BIT" />
+            <result column="credentials_non_expired" property="credentialsNonExpired" jdbcType="BIT" />
+            <result column="enabled" property="enabled" jdbcType="BIT" />
+    </resultMap>
+
+    <select id="getAllVmallSellers" resultMap="BaseResultMap">
+        select * from vmall_seller;
+    </select>
+</mapper>

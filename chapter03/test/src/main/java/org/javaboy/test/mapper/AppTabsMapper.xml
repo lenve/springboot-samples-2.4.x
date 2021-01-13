@@ -1,0 +1,24 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.javaboy.test.mapper.AppTabsMapper">
+
+    <resultMap id="BaseResultMap" type="org.javaboy.test.model.AppTabs">
+            <result column="id" property="id" jdbcType="INTEGER" />
+            <result column="name" property="name" jdbcType="VARCHAR" />
+            <result column="active_icon" property="activeIcon" jdbcType="VARCHAR" />
+            <result column="inactive_icon" property="inactiveIcon" jdbcType="VARCHAR" />
+            <result column="state" property="state" jdbcType="INTEGER" />
+            <result column="weight" property="weight" jdbcType="INTEGER" />
+            <result column="start_time" property="startTime" jdbcType="TIMESTAMP" />
+            <result column="end_time" property="endTime" jdbcType="TIMESTAMP" />
+            <result column="type" property="type" jdbcType="INTEGER" />
+            <result column="description" property="description" jdbcType="VARCHAR" />
+            <result column="last_update" property="lastUpdate" jdbcType="VARCHAR" />
+            <result column="last_update_time" property="lastUpdateTime" jdbcType="TIMESTAMP" />
+    </resultMap>
+
+    <select id="getAllAppTabss" resultMap="BaseResultMap">
+        select * from app_tabs;
+    </select>
+</mapper>

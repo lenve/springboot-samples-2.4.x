@@ -1,0 +1,50 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.javaboy.test.mapper.BbtMemberInfoMapper">
+
+    <resultMap id="BaseResultMap" type="org.javaboy.test.model.BbtMemberInfo">
+            <result column="id" property="id" jdbcType="BIGINT" />
+            <result column="customer_id" property="customerId" jdbcType="BIGINT" />
+            <result column="corp_id" property="corpId" jdbcType="VARCHAR" />
+            <result column="corp_user_id" property="corpUserId" jdbcType="VARCHAR" />
+            <result column="mobile" property="mobile" jdbcType="VARCHAR" />
+            <result column="name" property="name" jdbcType="VARCHAR" />
+            <result column="pass_word" property="passWord" jdbcType="VARCHAR" />
+            <result column="nick" property="nick" jdbcType="VARCHAR" />
+            <result column="avatar" property="avatar" jdbcType="VARCHAR" />
+            <result column="sex" property="sex" jdbcType="VARCHAR" />
+            <result column="age" property="age" jdbcType="INTEGER" />
+            <result column="birthday" property="birthday" jdbcType="TIMESTAMP" />
+            <result column="open_id" property="openId" jdbcType="VARCHAR" />
+            <result column="height" property="height" jdbcType="DOUBLE" />
+            <result column="weight" property="weight" jdbcType="DOUBLE" />
+            <result column="profession" property="profession" jdbcType="VARCHAR" />
+            <result column="province" property="province" jdbcType="BIGINT" />
+            <result column="city" property="city" jdbcType="BIGINT" />
+            <result column="area" property="area" jdbcType="BIGINT" />
+            <result column="street" property="street" jdbcType="BIGINT" />
+            <result column="address" property="address" jdbcType="VARCHAR" />
+            <result column="province_name" property="provinceName" jdbcType="VARCHAR" />
+            <result column="street_name" property="streetName" jdbcType="VARCHAR" />
+            <result column="area_name" property="areaName" jdbcType="VARCHAR" />
+            <result column="city_name" property="cityName" jdbcType="VARCHAR" />
+            <result column="last_login_time" property="lastLoginTime" jdbcType="TIMESTAMP" />
+            <result column="last_login_ip" property="lastLoginIp" jdbcType="VARCHAR" />
+            <result column="authorize_ip" property="authorizeIp" jdbcType="INTEGER" />
+            <result column="proxy_power" property="proxyPower" jdbcType="INTEGER" />
+            <result column="qiye_wx_user_id" property="qiyeWxUserId" jdbcType="VARCHAR" />
+            <result column="tb_user_id" property="tbUserId" jdbcType="VARCHAR" />
+            <result column="tb_user_valid_time" property="tbUserValidTime" jdbcType="TIMESTAMP" />
+            <result column="wx_union_id" property="wxUnionId" jdbcType="VARCHAR" />
+            <result column="job_number" property="jobNumber" jdbcType="VARCHAR" />
+            <result column="status" property="status" jdbcType="INTEGER" />
+            <result column="carrier_type" property="carrierType" jdbcType="INTEGER" />
+            <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+            <result column="modify_time" property="modifyTime" jdbcType="TIMESTAMP" />
+    </resultMap>
+
+    <select id="getAllBbtMemberInfos" resultMap="BaseResultMap">
+        select * from bbt_member_info;
+    </select>
+</mapper>

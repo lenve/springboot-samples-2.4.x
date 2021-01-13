@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</head>
+<body>
+<input type="button" onclick="getData()" value="get">
+<input type="button" onclick="putData()" value="put">
+<script>
+    function getData() {
+        $.get("http://localhost:8080/hello",function (msg) {
+            alert(msg);
+        })
+    }
+    function putData() {
+        $.ajax({
+            url:'http://localhost:8080/hello',
+            type:'put',
+            success:function (msg) {
+                alert(msg);
+            }
+        })
+    }
+</script>
+</body>
+</html>

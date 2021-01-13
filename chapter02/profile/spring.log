@@ -1,0 +1,33 @@
+2020-12-14 11:01:53.387  INFO 2276 --- [main] org.javaboy.profile.ProfileApplication   : Starting ProfileApplication using Java 10.0.2 on sang-3.local with PID 2276 (/Users/sang/workspace/springboot/code/chapter02/profile/target/classes started by sang in /Users/sang/workspace/springboot/code/chapter02/profile)
+2020-12-14 11:01:53.389  INFO 2276 --- [main] org.javaboy.profile.ProfileApplication   : The following profiles are active: prod
+2020-12-14 11:01:53.917  INFO 2276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-12-14 11:01:53.922  INFO 2276 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-14 11:01:53.922  INFO 2276 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2020-12-14 11:01:53.958  INFO 2276 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-14 11:01:53.958  INFO 2276 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 535 ms
+2020-12-14 11:01:54.060  INFO 2276 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-14 11:01:54.164  INFO 2276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-12-14 11:01:54.174  INFO 2276 --- [main] org.javaboy.profile.ProfileApplication   : Started ProfileApplication in 1.124 seconds (JVM running for 1.849)
+2020-12-14 11:10:14.307  INFO 2276 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-14 11:18:02.251  INFO 2336 --- [main] org.javaboy.profile.ProfileApplication   : Starting ProfileApplication using Java 10.0.2 on sang-3.local with PID 2336 (/Users/sang/workspace/springboot/code/chapter02/profile/target/classes started by sang in /Users/sang/workspace/springboot/code/chapter02/profile)
+2020-12-14 11:18:02.253  INFO 2336 --- [main] org.javaboy.profile.ProfileApplication   : The following profiles are active: prod
+2020-12-14 11:18:02.780  INFO 2336 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-12-14 11:18:02.785  INFO 2336 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-14 11:18:02.785  INFO 2336 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2020-12-14 11:18:02.823  INFO 2336 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-14 11:18:02.823  INFO 2336 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 540 ms
+2020-12-14 11:18:02.920  INFO 2336 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-14 11:18:03.022  INFO 2336 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-12-14 11:18:03.031  INFO 2336 --- [main] org.javaboy.profile.ProfileApplication   : Started ProfileApplication in 1.08 seconds (JVM running for 1.718)
+2020-12-14 11:19:06.396  INFO 2336 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-14 11:19:08.627  INFO 2340 --- [main] org.javaboy.profile.ProfileApplication   : Starting ProfileApplication using Java 10.0.2 on sang-3.local with PID 2340 (/Users/sang/workspace/springboot/code/chapter02/profile/target/classes started by sang in /Users/sang/workspace/springboot/code/chapter02/profile)
+2020-12-14 11:19:08.629  INFO 2340 --- [main] org.javaboy.profile.ProfileApplication   : The following profiles are active: prod
+2020-12-14 11:19:09.179  INFO 2340 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-12-14 11:19:09.184  INFO 2340 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-14 11:19:09.184  INFO 2340 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2020-12-14 11:19:09.219  INFO 2340 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-14 11:19:09.219  INFO 2340 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 559 ms
+2020-12-14 11:19:09.319  INFO 2340 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-14 11:19:09.420  INFO 2340 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-12-14 11:19:09.428  INFO 2340 --- [main] org.javaboy.profile.ProfileApplication   : Started ProfileApplication in 1.116 seconds (JVM running for 1.649)
+2020-12-14 11:19:19.289  INFO 2340 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
