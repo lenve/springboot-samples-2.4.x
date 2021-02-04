@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+</head>
+<body>
+<div>
+    <label for="username">请输入用户名：</label>
+    <input type="text" id="username" placeholder="用户名">
+</div>
+
+<div>
+    <input type="button" value="连接" id="connect">
+    <input type="button" value="断开连接" id="disconnet" disabled="disabled">
+</div>
+<div id="chat"></div>
+
+<div>
+    <label for="content">请输入聊天内容</label>
+    <input type="text" id="content" placeholder="聊天内容">
+</div>
+<input value="发送" type="button" id="send" disabled="disabled"></input>
+<script>
+    var stompClient;
+    $(function () {
+        $("#connect").click(function () {
+            connect();
+            $("#send").click(function () {
+                stompClient.send("/hello",{},JSON.stringify({'name':$("#username").val(),'content':$("#content").val()}))
+            })
+            $("#disconnet").click(function () {
+                stompClient.disconnect();
+                setConnect(false);
+            })
+        })
+    })
+    function connect() {
+        if (!$("#username").val()) {
+            return;
+        }
+        var socketjs = new SockJS("/chat");
+        stompClient = Stomp.over(socketjs);
+        stompClient.connect({},function (frame) {
+            setConnect(true);
+            stompClient.subscribe("/topic/greetings", function (greeting) {
+                var msgContent = JSON.parse(greeting.body);
+                console.log(msgContent);
+                $("#chat").append("<div>"+msgContent.name+":"+msgContent.content+"</div>");
+            });
+        })
+    }
+
+    function setConnect(connected) {
+        $("#connect").prop("disabled", connected);
+        $("#disconnet").prop("disabled", !connected);
+        $("#send").prop("disabled", !connected);
+    }
+</script>
+</body>
+</html>
